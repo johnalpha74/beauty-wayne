@@ -6,11 +6,18 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-  .container {
+.container {
     display: flex;
     text-align: center;
     color: white;
 }
+
+.top-nav {
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+}
+
   .logo-box {
     width: 50%;
     height: 50%;
@@ -18,22 +25,64 @@ body {
     margin: 1rem auto;
   }
 .logo-box img {
-    width: 20%;
-    height: 20%;
+    width: 30%;
+    height: 30%;
 }
 
 li 
 {
     display: inline;
-    padding: 30px;
+    padding: 1rem;
+    justify-content: space-between;
     margin: 0px;
-    
 }
 
 li a{
-    
     text-decoration: none;
+    color: #000;
+}
 
+li a.active {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  border-color: #F67023;
+  color: #F67023;
+}
+
+li a:hover {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  border-color: #F67023;
+  color: #F67023;
+}
+
+.search-box {
+    display: flex;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    border: 2px solid #F67023;
+    border-radius: 5px;
+    justify-content: right;
+}
+
+.search-box input[type="text"] {
+    width: 50%;
+    height: 50%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.search-button {
+  
+    display: inline;
+    margin: 1rem auto;
+    background-color: #fff;
 }
 
 .icon {
@@ -164,7 +213,8 @@ li a{
     margin-bottom: 10px;
     text-align: center;
   }
-.btn-hero {
+
+  .btn-hero {
     background-color: #000;
     color: white;
     padding: 15px;
@@ -208,13 +258,18 @@ li a{
     font-weight: 200;
     margin-bottom: 10px;
     text-align: center;
+    justify-content: center;
 }
 
 .design-text {
-  align-items: right;
-  padding-right: 10px;
+  display: flex;
+  margin: 0 9.375rem auto;
 }
 
+.copyright-text {
+  display: flex;
+  align-items: right;
+}
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
